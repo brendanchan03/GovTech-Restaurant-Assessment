@@ -51,3 +51,24 @@ To deploy this solution on the cloud, a serverless architecture would be leverag
 - **Data Durability:** S3's durability ensures that data is safely stored and protected against loss.
 - **Integration Flexibility:** S3 and Lambda can be easily integrated with other AWS services for more advanced processing, analytics, or even machine learning tasks.
 
+## 3. Architecture Diagram
+Below is a simplified architecture diagram illustrating the flow of data and the interaction between various components:
++-------------------------+       +-------------------------+
+|                         |       |                         |
+|  Amazon S3 (Raw Data)   |       |  Amazon S3 (Processed)  |
+|   - restaurant_data.json|<------|      - restaurants.csv  |
+|   - country_codes.xlsx  |       |  - restaurant_events.csv|
+|                         |       |                         |
++-------------------------+       +-------------------------+
+            |                                  ^
+            v                                  |
++-------------------------+       +-------------------------+
+|                         |       |                         |
+|   AWS Lambda            |<------|  AWS Lambda (Processing)|
+|  (Data Ingestion)       |       |                         |
+|                         |       |                         |
++-------------------------+       +-------------------------+
+- **Amazon S3 (Raw Data):** Stores the initial data files.
+- **AWS Lambda (Data Processing):**  Extracts and processes the data to generate the final CSV files.
+- **Amazon S3 (Processed Data):** Stores the output CSV files for further use.
+This setup leverages AWS's serverless capabilities, ensuring that the solution is both scalable and cost-effective, while also being easy to manage and extend.
