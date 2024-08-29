@@ -53,7 +53,6 @@ To deploy this solution on the cloud, a serverless architecture would be leverag
 
 ## 3. Architecture Diagram
 Below is a simplified architecture diagram illustrating the flow of data and the interaction between various components:
-<div style="text-align: center;">
 `````
 +-------------------------+       +-------------------------+
 |                         |       |                         |
@@ -71,8 +70,6 @@ Below is a simplified architecture diagram illustrating the flow of data and the
 |                         |       |                         |
 +-------------------------+       +-------------------------+
 `````
-</div>
-
 - **Amazon S3 (Raw Data):** Stores the initial data files.
 - **AWS Lambda (Data Processing):**  Extracts and processes the data to generate the final CSV files.
 - **Amazon S3 (Processed Data):** Stores the output CSV files for further use.
