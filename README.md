@@ -21,6 +21,7 @@ source venv/bin/activate # On Windows use: venv\Scripts\activate
 1. Start Jupyter Notebook
 2. Open main.ipynb in your browser.
 3. Run all cells to execute the data processing steps, which will generate restaurants.csv and restaurant_events.csv in the project directory.
+
 **Option 2: Running as a Python Script**
 1. Convert the Jupyter notebook to a Python script:
 ```bash
