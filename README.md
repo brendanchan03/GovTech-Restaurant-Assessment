@@ -32,4 +32,22 @@ python main.py
 ```
 This will accomplish the same tasks as the notebook, producing the required CSV files.
 
+## 2. Summary of Cloud Design and Deployment
+### Design Overview
+To deploy this solution on the cloud, a serverless architecture would be leveraged, focusing on scalability, cost-effectiveness, and ease of management.
+### Data Ingestion:
+- The input files (restaurant_data.json and country_codes.xlsx) would be stored in Amazon S3. S3 offers reliable, scalable storage, ensuring high availability of the data.
+### Data Processing:
+- AWS Lambda would be used for processing the data. Lambda's serverless nature automatically scales with demand and only incurs costs when the code is executed. This makes it a flexible and cost-efficient option for processing tasks.
+- The Lambda function would extract relevant events from the dataset, specifically focusing on those in April 2019, and convert the results into CSV format.
+### Storage and Access:
+- The processed CSV files would be stored in a separate S3 bucket, enabling easy access for further processing or integration with other AWS services, such as AWS Athena or Amazon Redshift for querying and analysis.
+### Deployment Considerations:
+- **Scalability:** AWS Lambda scales automatically based on the load, ensuring that the solution can handle varying amounts of data without requiring manual intervention.
+- **Cost Efficiency:** The serverless architecture minimizes costs, as expenses are only incurred when the Lambda function is running. S3 storage costs are also economical and scalable.
+- **Security:** Access to S3 buckets would be tightly controlled using IAM roles and policies, ensuring that only authorized users and services can access the data.
+### Decisions and Considerations
+- **Serverless Architecture:** Using AWS Lambda in conjunction with S3 minimizes management overhead and automatically adjusts to handle workload variations.
+- **Data Durability:** S3's durability ensures that data is safely stored and protected against loss.
+- **Integration Flexibility:** S3 and Lambda can be easily integrated with other AWS services for more advanced processing, analytics, or even machine learning tasks.
 
