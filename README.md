@@ -4,7 +4,7 @@ This project focuses on extracting and processing restaurant data, particularly 
 ### Prerequisites
 - **Python 3.x** installed on your system.
 - **pip** package manager to install dependencies.
--**Internet access** to download any required data files.
+- **Internet access** to download any required data files.
 ### Installation
 1. **Clone the Repository:**
 ```bash
